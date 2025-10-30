@@ -1,0 +1,81 @@
+.grafico {
+  width: 100%;
+  background: #1e2424;
+  padding: 24px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+
+  &__info {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #f9fafa;
+    padding-bottom: 36px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    white-space: nowrap;
+  }
+
+  &__percentage {
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 600;
+    color: #f9fafa;
+    display: flex;
+    padding-bottom: 12px;
+  }
+
+  &__questoes {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #899c9f;
+  }
+
+  &__right {
+    display: flex;
+    gap: 37px;
+
+    @media (max-width: 768px) {
+      gap: 17px;
+    }
+  }
+
+  &__content {
+    width: 8px;
+    height: 100%;
+    border-radius: 4px;
+    background: #293132;
+    display: flex;
+    align-items: flex-end;
+  }
+
+  &__progress {
+    width: 8px;
+    border-radius: 4px;
+    background: #47d5eb;
+
+    &--10-percent {
+      height: 10%;
+    }
+
+    &--20-percent {
+      height: 20%;
+    }
+
+    &--40-percent {
+      height: 40%;
+    }
+
+    &--60-percent {
+      height: 60%;
+    }
+
+    &--65-percent {
+      height: 65%;
+    }
+  }
+}

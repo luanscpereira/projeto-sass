@@ -1,0 +1,137 @@
+.modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background: #1d1d1d99;
+    backdrop-filter: blur(40px);
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    max-width: 880px;
+    max-height: 672px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #121616;
+    color: #f9f9f9;
+    z-index: 11;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin: 64px;
+
+    @media (max-width: 576px) {
+      max-width: initial;
+      max-height: initial;
+      margin: 0;
+    }
+
+    &--spacing {
+      width: 100%;
+      height: 100%;
+      max-width: 880px;
+      max-height: 800px;
+
+      @media (max-width: 576px) {
+        max-width: initial;
+        max-height: initial;
+        margin: 0;
+      }
+    }
+  }
+
+  &__header {
+    padding: 28px 40px;
+
+    @media (max-width: 576px) {
+      padding: 24px;
+    }
+  }
+
+  &__main {
+    padding: 40px 64px;
+
+    @media (max-width: 576px) {
+      padding: 24px;
+    }
+  }
+
+  &__title {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    margin-bottom: 40px;
+
+    @media (max-width: 576px) {
+      margin-bottom: 24px;
+    }
+
+    &--spacing {
+      margin-bottom: 0px;
+    }
+  }
+
+  &__info {
+    padding-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &--spacing {
+      margin-top: 24px;
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  &__text {
+    font-size: 16px;
+    color: #ccc;
+    margin-bottom: 24px;
+  }
+
+  &__open-btn,
+  &__close-btn {
+    display: inline-block;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0 0;
+    padding-bottom: 28px;
+  }
+
+  /* Quando o checkbox estiver marcado, mostrar o modal */
+  // modal produto
+  &__checkbox#modal-produto:checked ~ .modal#produto {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  // modal config
+  &__checkbox#modal-config:checked ~ .modal#config {
+    visibility: visible;
+    opacity: 1;
+  }
+}

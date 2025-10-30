@@ -1,0 +1,118 @@
+.pra-voce {
+  height: 100%;
+  display: flex;
+  width: 100%;
+
+  &__content {
+    display: flex;
+    width: calc(100% - 104px); // 104px da largura do meu aside
+    overflow: auto;
+
+    @media (max-width: 992px) {
+      flex-direction: column;
+    }
+
+    @media (max-width: 576px) {
+      width: 100%;
+    }
+  }
+
+  &__middle {
+    background: #121616;
+    width: calc(100% - 400px); // 400px do conteudo lateral
+    height: 100%;
+    max-width: 1096px;
+    margin: 0 auto;
+
+    @media (max-width: 992px) {
+      width: 100%;
+    }
+  }
+
+  &__right {
+    width: 400px;
+    background: #121616;
+    height: 100%;
+    min-width: 400px;
+    border-left: 1px solid #1e2424;
+
+    @media (max-width: 992px) {
+      width: 100%;
+      border: none;
+    }
+  }
+
+  &__conteudo-semana {
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 576px) {
+      padding: 24px;
+      background-color: #1E2424;
+    }
+  }
+
+  &__title {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    color: #f9fafa;
+    margin-bottom: 24px;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    overflow: auto;
+    width: 100%;
+    padding-bottom: 12px;
+
+    .card:last-child {
+      @media (max-width: 782px) {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__parcial-semana {
+    padding: 32px 40px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 576px) {
+      padding: 24px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+  }
+
+  &__grafico-fake {
+    opacity: 0;
+
+    @media (max-width: 1279px) {
+      display: none;
+    }
+  }
+
+  &__tarefas-hoje {
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: 992px) {
+      padding: 24px 40px ;
+    }
+
+    @media (max-width: 576px) {
+      padding: 24px 24px 158px 24px; 
+      // 158px da somatoria da altura do meu footer e do meu header 
+      // com o padding bottom da minha section
+    }
+  }
+}

@@ -1,0 +1,58 @@
+.list {
+  color: #f9fafa;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  &__item {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
+    color: #f9fafa;
+    display: flex;
+    align-items: center;
+    padding: 14px 16px;
+    background: #1e2424;
+    border-radius: 8px;
+  }
+
+  &__aula {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-top: 4px;
+  }
+
+  &__text {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #c1cbcd;
+    margin-left: 8px;
+  }
+
+  &__time {
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    color: #c1cbcd;
+    margin-left: 8px;
+  }
+
+  &__bnt {
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: #f9fafa;
+    background: transparent;
+    border: none;
+    display: flex;
+    cursor: pointer;
+  }
+}

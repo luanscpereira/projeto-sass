@@ -1,0 +1,37 @@
+.btn {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  color: #f9fafa;
+  border: none;
+  background: transparent;
+  margin-top: 32px;
+  display: flex;
+  cursor: pointer;
+
+  &--large {
+    font-size: 16px;
+    margin-top: 56px;
+  }
+
+  &--spacing {
+    position: absolute;
+    right: 24px;
+    bottom: 24px;
+  }
+
+  &--solid {
+    width: 200px;
+    height: 48px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #404d4f;
+
+    &:disabled {
+      color: #6e8386;
+      cursor: initial;
+    }
+  }
+}
